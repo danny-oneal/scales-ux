@@ -3,8 +3,6 @@ name: CI/CD
 on:
   push:
     branches: [main-scales]
-    paths:
-      - "client/**"
 
   # allows you to manually execute this pipeline from the Actions tab.
   workflow_dispatch:
