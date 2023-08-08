@@ -29,8 +29,8 @@ jobs:
               uses: appleboy/scp-action@master
               with:
                 host: ${{ secrets.QA_HOST }}
-                username: "root"
+                username: root
                 key: ${{ secrets.SSH_PRIVATE_KEY }}
                 rm: true
-                source: "build/*"
-                target: "/var/www/html/build"
+                source: build/*
+                target: /var/www/html/build
