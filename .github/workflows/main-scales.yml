@@ -34,4 +34,4 @@ jobs:
             - name: Add host to known hosts
               run: echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
             - name: Launch deploy script on droplet
-              run: scp -r ./build/ root@${{ secrets.QA_HOST }}:/var/www/html/build
+              run: scp -r ./build/ root@${{ secrets.QA_HOST }}:/var/www/html/
