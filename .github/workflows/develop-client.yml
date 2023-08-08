@@ -2,8 +2,7 @@ name: CI/CD
 
 on:
   push:
-    branches:
-      - main-scales
+    branches: [main-scales]
     paths:
       - "client/**"
 
