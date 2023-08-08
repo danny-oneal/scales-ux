@@ -26,12 +26,12 @@ jobs:
             - name: Build
               run: npm run build
               env:
-                CI: false
+                CI: false # this is needed to prevent the react build from failing
             - name: Create the .ssh directory
               run: mkdir ~/.ssh && chmod 700 ~/.ssh
             - name: Install private key
               run: echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
             - name: Add host to known hosts
               run: echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
-            - name: Launch deploy script on droplet
+            - name: SCP files to server
               run: scp -r ./build/ root@${{ secrets.QA_HOST }}:/var/www/html/
