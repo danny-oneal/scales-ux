@@ -102,7 +102,7 @@ const SignUpPage = () => {
               style={{ color: "crimson", fontStyle: "italic" }}
             >
               Official launch in fall 2023, beta user onboarding begins
-              mid-June. D-Day October 20.
+              mid-June. D-Day October 20. Parallel?
             </h6>
 
             <Loader
