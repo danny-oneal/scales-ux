@@ -3,7 +3,6 @@ name: CI/CD
 on:
   push:
     branches: [main-scales]
-
   # allows you to manually execute this pipeline from the Actions tab.
   workflow_dispatch:
 
@@ -17,6 +16,8 @@ jobs:
               uses: actions/setup-node@v2
               with:
                   node-version: 18.x
+            - name: Change to client directory
+              run: cd client
             - name: Install dependencies
               run: npm install
             - name: Build
